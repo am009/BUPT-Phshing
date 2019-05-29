@@ -1,0 +1,93 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>上网注销窗</title>
+<script language="JavaScript"><!--
+time='406       ';flow='0         ';fsele=1;fee='0         ';xsele=0;xip='000.000.000.000.';
+flow0=flow%1024;flow1=flow-flow0;flow0=flow0*1000;flow0=flow0-flow0%1024;fee1=fee-fee%100;
+flow3='.';
+if(flow0/1024<10)flow3='.00';
+else{if(flow0/1024<100)flow3='.0';}
+function DispTFM(sele){
+switch(sele){
+	case 0:
+		document.write("已使用时间 Used time : "+time +" Min");
+		break;
+	case 1:
+	    document.write("已使用校外流量 Used internet traffic : "+flow1/1024+flow3+flow0/1024+" MByte");
+	    break;
+	case 2:
+		if(fsele==1)document.write("余额 Balance : "+"RMB"+fee1/10000);
+			break;
+		case 3:
+			if(xsele==1)document.write("外网映射地址 External network IP address mapping : "+xip);
+			break;			
+		}}
+url3='1.htm';url4='F.htm';
+s2=0;
+function ee(){}//if(s2!=1){window.open(url3,'','width=610,height=450,left=0,top=0,resizable=1');window.close();}}
+function wc(){if(window.confirm("确定注销? Logout Confirmed?")){s2=1;window.location=url4}}
+// --></script>
+<style><!--
+a {text-decoration: none}
+tr,td{padding:0;margin:0}
+body {text-align:center;background-color: #d9eaf3;}
+.f1 { font-size: 8pt; font-family: Verdana; line-height: 11pt ;  color:#5F6468}
+.f2 { font-size: 9pt; font-family: Verdana; line-height: 14pt; color:#5A7E98}
+.input-border{border:1px solid #b8b8b8;	width:168px; line-height:20px; font-size:14px; height:22px;}
+.con {width: 970px; height:452px; margin-right: auto; margin-left: auto; margin-top: 10px;}
+.login {background-image: url('a25.jpg'); background-repeat: no-repeat; width: 970px; height:452px;}
+.login .b_left {float: left;height: 450px;width: 400px}
+.login .b_cernet {float:left;height:250px;width: 336px; margin:0 auto;}
+.login .b_right {float: left;height: 250px;	width: 390px; margin:190px 0 0 96px;*margin:190px 0 0 96px;_margin:190px 0 0 48px;text-align:left;}
+.login .b_right li{
+	margin:15px 0;
+}
+.login-b, .login-b2, .login-b3{background-image: url('a06.gif');height: 26px;width: 77px;border:0 none;cursor:hand !important}
+.login-b2{background-image: url('a06.gif');	background-position: 0px -27px}
+.login-b3{background-image: url('a06.gif'); background-position: 0px -54px}
+-->
+</style>
+</head>
+<!--Dr.COMWebLoginID_1.htm-->
+<body onselectstart="return false" onunload="ee();">
+<div class="con">
+<div class="login">
+<div class="b_cernet" style="width: 325px;  margin:0 0 0 80px;padding-top:190px;*margin:0 0 0 80px;_margin:0 0 0 40px;">
+<form name="form1" method="post" action="">
+<table border="0" width="105%" cellspacing="1" cellpadding="0" height="100%" class="f1">
+	<tr>
+		<td height="40">
+		<p align="center">
+		<span style="font-size:16px;padding:6px 12px;line-height:1.4;vertical-align:middle;border:1px solid #46B8DA;border-radius:4px;background-color:#5BC0DE;color:#fff">登&nbsp;录&nbsp;成&nbsp;功</span>
+	</td>
+	</tr>
+	<tr>
+		<td height="100" width="99%" align="center">
+<p><script language="javascript">DispTFM(0)</script></p>
+<p><script language="javascript">DispTFM(1)</script></p>
+<p><script language="javascript">DispTFM(2)</script></p>
+<p><script language="javascript">DispTFM(3)</script></p>
+</td>
+	</tr>
+	<tr>
+		<td height="35">
+<p style="font-size:16px"><a href="http://netaccount.bupt.edu.cn">进入自服务系统</a></p>
+<p align="center">
+<input type="button" onClick="javascript:wc()" class="login-b" onMouseOver="this.className='login-b2'" onMouseDown="this.className='login-b3'" onMouseOut="this.className='login-b'"/>
+</p>
+</td>
+	</tr>
+</table>
+</form>
+</div>
+				<div class="b_right">
+					<iframe name="I1"  width="390"  height="168" frameborder="0" src="http://10.3.8.210/gw/notice1.htm" marginwidth="1" marginheight="1" allowtransparency="yes" target="_blank" scrolling="no"></iframe>
+				</div>
+</div>
+</div>
+</body>
+</html>

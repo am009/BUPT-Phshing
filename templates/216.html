@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="./assets/normalize.css" />
+<link rel="stylesheet" href="./assets/login.css" />
+<script src="./assets/jquery.min.js"></script>
+<title>网络认证登录</title>
+</head>
+<body>
+<div class="background">
+</div>
+<div style="text-align:center">
+<div class="container">
+    <div class="row header">
+    </div>
+    <div class="row">
+        <div class="wrap">
+            <div class="notice-panel">
+                <div class="notice-title">
+                    通知
+                </div>
+                <div class="notice-content">
+                    1、	准入认证的用户名和密码与登录校园网计费认证网关相同。
+2、	认证通过以后可以访问校园网内网资源，如要访问外网需要进行校园网准出认证。
+                </div>
+            </div><div class="login-panel">
+                <div class="login-panel__title">
+                    网络认证登录
+                </div>
+                <form class="el-form el-form--label-top" method="POST" action="login" onsubmit="login()">
+                    
+                    <div class="el-form-item">
+                        <label class="el-form-item__label">账号</label>
+                        <div class="el-form-item__content">
+                            <div class="el-input el-input--prefix">
+                                <input autocomplete="off" placeholder="输入账号" type="text" rows="2" validateevent="true" prefixicon="el-icon-location" class="el-input__inner" name="user">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label">密码</label>
+                        <div class="el-form-item__content">
+                            <div class="el-input el-input--prefix">
+                                <input autocomplete="off" placeholder="输入密码" type="password" rows="2" validateevent="true" prefixicon="el-icon-bell" class="el-input__inner" name="pass">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div class="login-about">
+                        <a href='http://netaccount.bupt.edu.cn/login'>进入自服务系统</a>
+                    </div>
+
+                    <button type="submit" class="el-button ex-width el-button--primary" style="margin-bottom:20px;">
+                        <span>登录</span>
+                    </button>
+
+                    
+                </form>
+            </div>
+            <div class="mobile-notice-panel">
+                <div class="notice-content">
+                    1、	准入认证的用户名和密码与登录校园网计费认证网关相同。
+2、	认证通过以后可以访问校园网内网资源，如要访问外网需要进行校园网准出认证。
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</div>
+</div>
+<script>
+var sec;
+var intervalId = 0;
+$(function(){
+    $('.effect').on('blur',function(){
+        if($(this).val() != ''){
+            $(this).siblings('label').addClass('trans');
+        }else{
+            $(this).siblings('label').removeClass('trans');
+        }
+    })
+});
+function login() {
+        var loginForm = document.forms[0];
+        var user = loginForm.user.value;
+        var password = loginForm.pass.value;
+        if (user == "" || user == "账号 Account") {
+                alert("请输入用户名");
+                return false;
+        }
+        else if (password == "" || password == undefined) {
+                alert("请输入密码");
+                return false;
+        }
+        return true;
+}
+</script>
+<!--[if lte IE 7]> <style> .login-panel{ float:left; } .notice-panel{ float:left; width: 370px; } </style> <![endif]-->
+</body>
+</html>
