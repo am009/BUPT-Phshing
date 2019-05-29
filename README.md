@@ -17,4 +17,3 @@
 
 最后用sudo python3 hello.py
 
-另外 我写的清除iptables的小脚步不一定在其他系统管用
