@@ -17,3 +17,6 @@
 
 最后用sudo python3 hello.py
 
+可以通过运行deleteRules.py删除nat表的PREPOUTING的所有规则（sudo）
+
+pureserver.py则是直接运行服务器，不设置任何转发
