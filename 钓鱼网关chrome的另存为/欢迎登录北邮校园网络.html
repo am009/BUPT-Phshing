@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0018)http://10.3.8.211/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		
+		<title>欢迎登录北邮校园网络</title>
+<script language="JavaScript" type="text/javascript">
+sv=2;sv1=0;v6='[2001:da8:215:4008::211]';                                myv6ip='                                       ';v4serip='10.3.8.211'     ;m46=0;v46ip='10.122.236.192'                         ;
+
+function setFormFocus() {
+document.forms[0].DDDDD.focus();
+document.forms[0].DDDDD.select();
+}
+function tologin(){
+	var thisform=document.forms[0];
+	if(thisform.DDDDD.value=="") {
+		thisform.DDDDD.focus();
+		alert("请您输入用户名");
+		return false;
+	} else if(thisform.upass.value=="") {
+		thisform.upass.focus();
+		alert("请您输入密码");
+		return false;
+	} else {
+		setCookie("myusername",thisform.DDDDD.value,10);
+		if(thisform.savePWD.checked)
+		  setCookie("pwd",thisform.upass.value,10);
+		else
+		  setCookie("pwd","",-10);
+		   setCookie("username",thisform.DDDDD.value,10)
+		  	  setCookie("smartdot",thisform.upass.value,10)
+		//thisform.submit();
+		
+	}
+}
+function setCookie(cookieName,cvalue,expiredays,path){
+var expireDate = new Date();
+var expireStr = "";
+if (expiredays != null) {
+expireDate.setTime(expireDate.getTime()+(expiredays*24*3600*1000));
+expireStr="; expires="+expireDate.toGMTString();
+}
+pathStr = (path == null) ? "; path=/" : "; path=" + path;
+document.cookie = cookieName + '=' + escape(cvalue) + expireStr + pathStr;
+}
+
+function getCookie(cookieName)
+{
+	var index=-1;
+	if(document.cookie)
+		index=document.cookie.indexOf(cookieName);
+	if(index==-1) {
+		return "";
+	} else {
+	     var iBegin = (document.cookie.indexOf("=", index) +1);
+var iEnd =document.cookie.indexOf(";", index);
+if (iEnd == -1)
+{
+iEnd = document.cookie.length;
+}
+return unescape(document.cookie.substring(iBegin,iEnd));
+	}
+}
+</script>
+			<style><!--
+			a {text-decoration: none}
+			tr,td{padding:0;margin:0}
+			body {text-align:center;background-color: #d9eaf3; margin:0}
+			.f1 { font-size: 8pt; font-family: Verdana; line-height: 14pt ;  color:#5F6468}
+			.f2 { font-size: 9pt; font-family: Verdana; line-height: 14pt; color:#5A7E98}
+			.con {width: 970px; height:452px; margin-right: auto; margin-left: auto; margin-top: 10px;}
+			.login {background-image: url('a25.jpg'); background-repeat: no-repeat; width: 970px; height:452px}
+			.login .b_left {float: left;height: 450px;width: 400px}
+			.login .b_cernet {float:left;height:250px;width: 336px; margin:0 auto;}
+			.login .b_right {float: left;height: 250px;	width: 390px; margin:190px 0 0 96px;*margin:190px 0 0 96px;_margin:190px 0 0 48px;text-align:left;}
+			.login .b_right li{
+				margin:15px 0;
+			}
+			.login a {
+				color:#000;
+				text-decoration:none;
+				font-size:12px;
+			}
+			.login-button {
+				background-image:url('a26.gif');
+				background-repeat:no-repeat;
+				background-position: 0px -76px;
+				border:0px solid #fff;
+				outline:none;
+				width:175px;
+				height:49px;
+				vertical-align:text-bottom
+			}
+			.login-input {
+			width:289px;height:37px;line-height:37px;background-image:url('a26.gif');background-repeat:no-repeat;*margin:10px 0 10px -1px;text-align:left; margin-left:36px; margin-right:0; margin-top:10px; margin-bottom:10px
+			}
+			.login-inputk{
+			margin-left:50px;margin-top:9px;font-size:14px;border:0 none;outline:none;
+			}
+			
+			-->
+		</style>
+	</head>
+	<!--Dr.COMWebLoginID_0.htm-->
+	<body onselectstart="return false" onload="document.forms[0].DDDDD.value=getCookie(&#39;myusername&#39;);
+	var pwd = getCookie(&#39;pwd&#39;);
+	if (pwd != &#39;&#39;){
+	document.forms[0].upass.value = pwd;
+	document.forms[0].savePWD.checked = true;
+	}
+	setFormFocus();">
+		<div class="con">
+			<div class="login">
+				<div class="b_cernet" style="width: 325px;  margin:0 0 0 80px;padding-top:190px;*margin:0 0 0 80px;_margin:0 0 0 40px;">
+					<form name="form1" method="post" action="http://10.3.8.211/" onsubmit="tologin();">
+						<div style="background-position:0px 0px;" class="login-input">
+							<input id="username" name="DDDDD" type="text" width="100%" class="login-inputk" autocomplete="off" maxlength="26" placeholder="帐号 Account">
+						</div>
+
+						<div style="background-position:0px -38px;position:relative" class="login-input">
+							<input id="password" name="upass" type="password" maxlength="16" class="login-inputk" placeholder="密码 Password">
+						</div>
+
+						<div style="margin:0 0 10px 36px;*margin:0 0 10px 18px;height:50px;width:350px;line-height:50px;clear:both;position:relative;text-align:left">
+							<input type="checkbox" name="savePWD" value="0" style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;"><span style="font-size:12px;">保存密码</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							<input type="submit" name="0MKKey" value="" class="login-button">&nbsp;&nbsp;
+						</div>
+						<hr style="width:360px;">
+
+<a target="_blank" href="http://netaccount.bupt.edu.cn/">查询流量、余额、上网详单和修改密码请点击进入自服务系统</a>
+					</form>
+				</div>
+				<div class="b_right">
+					<iframe name="I1" width="390" height="250" frameborder="0" src="./欢迎登录北邮校园网络_files/notice1.html" marginwidth="1" marginheight="1" allowtransparency="yes" target="_blank" scrolling="no"></iframe>
+				</div>
+			</div>
+		</div>
+	
+
+</body></html>

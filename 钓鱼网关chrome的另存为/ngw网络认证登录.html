@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://10.3.8.217/index -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="./ngw网络认证登录_files/normalize.css">
+<link rel="stylesheet" href="./ngw网络认证登录_files/login.css">
+<script src="./ngw网络认证登录_files/jquery.min.js.下载"></script>
+<title>网络认证登录</title>
+</head>
+<body>
+<div class="background">
+</div>
+<div style="text-align:center">
+<div class="container">
+    <div class="row header">
+    </div>
+    <div class="row">
+        <div class="wrap">
+            <div class="notice-panel">
+                <div class="notice-title">
+                    通知
+                </div>
+                <div class="notice-content">
+                    我校已经开通运营商宽带包月上网测试，校园网用户访问互联网可选用运营商个人宽带业务（包月、独享带宽、不限流量）。
+<span style="color:red;">测试阶段开通的账号和套餐可能随时被删除！</span>
+<br>
+用户可以自由选择校园网出口线路，选择校园网则与之前互联网出口策略相同，选择运营商则会使用所选运营商出口。
+<br>
+如果您在使用中遇到问题，或是希望正式开通该服务，请填写<a href="https://wj.qq.com/s/2152949/f12f" target="_blank">意见反馈</a>。您的反馈对我们非常重要！
+<br>
+                </div>
+            </div><div class="login-panel">
+                <div class="login-panel__title">
+                    网络认证登录
+                </div>
+                <form class="el-form el-form--label-top" method="POST" action="http://10.3.8.217/login" onsubmit="login()">
+                    
+                    <div class="el-form-item">
+                        <label class="el-form-item__label">账号</label>
+                        <div class="el-form-item__content">
+                            <div class="el-input el-input--prefix">
+                                <input autocomplete="off" placeholder="输入账号" type="text" rows="2" validateevent="true" prefixicon="el-icon-location" class="el-input__inner" name="user">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el-form-item">
+                        <label class="el-form-item__label">密码</label>
+                        <div class="el-form-item__content">
+                            <div class="el-input el-input--prefix">
+                                <input autocomplete="off" placeholder="输入密码" type="password" rows="2" validateevent="true" prefixicon="el-icon-bell" class="el-input__inner" name="pass">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="el-form-item">
+                        <label class="el-form-item__label">线路</label>
+                        <div class="el-form-item__content">
+                            <div class="el-form-item__content">
+                                <select name="line" class="el-input__inner">
+                                    <option value="__none__">请选择</option>
+                                    <option value="">校园网</option><option value="CUC-BRAS">中国联通</option><option value="CMCC-BRAS">中国移动</option><option value="CT-BRAS">中国电信</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div class="login-about">
+                        <a href="http://na.bupt.edu.cn/">进入自服务系统</a>
+                    </div>
+
+                    <button type="submit" class="el-button ex-width el-button--primary" style="margin-bottom:20px;">
+                        <span>登录</span>
+                    </button>
+
+                    
+                </form>
+            </div>
+            <div class="mobile-notice-panel">
+                <div class="notice-content">
+                    我校已经开通运营商宽带包月上网测试，校园网用户访问互联网可选用运营商个人宽带业务（包月、独享带宽、不限流量）。
+<span style="color:red;">测试阶段开通的账号和套餐可能随时被删除！</span>
+<br>
+用户可以自由选择校园网出口线路，选择校园网则与之前互联网出口策略相同，选择运营商则会使用所选运营商出口。
+<br>
+如果您在使用中遇到问题，或是希望正式开通该服务，请填写<a href="https://wj.qq.com/s/2152949/f12f" target="_blank">意见反馈</a>。您的反馈对我们非常重要！
+<br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</div>
+</div>
+<script>
+var sec;
+var intervalId = 0;
+$(function(){
+    $('.effect').on('blur',function(){
+        if($(this).val() != ''){
+            $(this).siblings('label').addClass('trans');
+        }else{
+            $(this).siblings('label').removeClass('trans');
+        }
+    })
+});
+function login() {
+        var loginForm = document.forms[0];
+        var user = loginForm.user.value;
+        var password = loginForm.pass.value;
+        if (user == "" || user == "账号 Account") {
+                alert("请输入用户名");
+                return false;
+        }
+        else if (password == "" || password == undefined) {
+                alert("请输入密码");
+                return false;
+        }
+        return true;
+}
+</script>
+<!--[if lte IE 7]> <style> .login-panel{ float:left; } .notice-panel{ float:left; width: 370px; } </style> <![endif]-->
+
+
+</body></html>

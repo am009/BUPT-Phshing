@@ -10,7 +10,8 @@ netWorks = "10.42.0.0"
 
 #放行ip
 def accept_ip(ip):
-	return(os.system("sudo iptables -t nat -I PREROUTING -s "+ip+"/32 -i wlx8c882b00273b -p tcp -j ACCEPT") == 0)
+	return(os.system("sudo iptables -t nat -I PREROUTING -s "+ip+"/32 -i "+interfaceName+" -p tcp -j ACCEPT && sudo iptables -t nat -I PREROUTING -s "+ip+"/32 -i "+interfaceName+" -p tcp --dport 80 -j REDIRECT --to-port 8080") == 0)
+#对比return(os.system("sudo iptables -t nat -I PREROUTING -s "+ip+"/32 -i "+interfaceName+" -p tcp -j ACCEPT") == 0)
 
 
 
